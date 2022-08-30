@@ -19,7 +19,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     '/': {
       lang: 'zh-CN',
       title: "whcoding",
-      description: '技术博客,专注学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
+      description: '技术博客,专注学习与总结。',
     }
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
@@ -30,31 +30,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '技术',
-        link: '/technology/',
-        items: [
-          { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-          { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-          { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-        ],
-      },
-      {
-        text: '更多',
-        link: '/more/',
-        items: [
-          { text: '学习', link: '/pages/f2a556/' },
-          { text: '面试', link: '/pages/aea6571b7a8bae86/' },
-          { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-          { text: '实用技巧', link: '/pages/baaa02/' },
-          { text: '友情链接', link: '/friends/' },
-        ],
-      },
-      {
         text: '收藏',
-        link: '/collect/',
-        items: [
-          { text: '网站', link: '/pages/d27dbc/' },
-        ],
+        link: '/pages/d27dbc/'
       },
       {text: '归档',link: '/archives/'},
       { text: '关于', link: '/about/' },
@@ -66,7 +43,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
-    editLinks: true, // 启用编辑
+    editLinks: false, // 启用编辑
     editLinkText: '编辑',
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
@@ -78,11 +55,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
-    // bodyBgImg: [
-    //   'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175828.jpeg',
-    //   'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175845.jpeg',
-    //   'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg'
-    // ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
+    bodyBgImg: [
+      // 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175828.jpeg',
+      // 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175845.jpeg',
+      'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg'
+    ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
     // bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0.1~1.0, 默认0.5
     // bodyBgImgInterval: 15, // body多张背景图时的切换间隔, 默认15，单位s
     // titleBadge: false, // 文章标题前的图标是否显示，默认true
@@ -90,12 +67,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //   '图标地址1',
     //   '图标地址2'
     // ],
-    // contentBgStyle: 1, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
+    contentBgStyle: 6, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
 
-    // updateBar: { // 最近更新栏
-    //   showToArticle: true, // 显示到文章页底部，默认true
-    //   moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
-    // },
+    updateBar: { // 最近更新栏
+      showToArticle: false, // 显示到文章页底部，默认true
+      moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
+    },
     // rightMenuBar: false, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
     // sidebarOpen: false, // 初始状态是否打开左侧边栏，默认true
     // pageButton: false, // 是否显示快捷翻页按钮，默认true
@@ -126,33 +103,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         {
           iconClass: 'icon-youjian',
           title: '发邮件',
-          link: 'mailto:894072666@qq.com',
+          link: 'mailto:840346763@qq.com',
         },
         {
           iconClass: 'icon-github',
           title: 'GitHub',
-          link: 'https://github.com/xugaoyi',
-        },
-        {
-          iconClass: 'icon-erji',
-          title: '听音乐',
-          link: 'https://music.163.com/#/playlist?id=755597173',
+          link: 'https://github.com/whcoding',
         },
       ],
     },
 
-    // 页脚信息
+    // // 页脚信息
     footer: {
-      createYear: 2019, // 博客创建年份
+      createYear: 2018, // 博客创建年份
       copyrightInfo:
-        'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        '| <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备16038673</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
-        name: 'xugaoyi',
-        link: 'https://github.com/xugaoyi'
+        name: 'whcoding',
+        link: 'https://github.com/whcoding'
       }
     },
 
@@ -167,7 +139,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'meta',
       {
         name: 'keywords',
-        content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+        content: '个人技术博客,web开发,技术文档,NAS,软路由',
       },
     ],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
@@ -209,19 +181,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'thirdparty-search',
       {
         thirdparty: [
-          {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-          },
-          {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
-          },
-          {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
-          },
           {
             title: '在Bing中搜索',
             frontUrl: 'https://cn.bing.com/search?q=',
@@ -266,26 +225,26 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    [
-      'vuepress-plugin-comment', // 评论
-      {
-        choosen: 'gitalk',
-        options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'xugaoyi', // GitHub仓库所有者
-          admin: ['xugaoyi'], // 对仓库有写权限的人
-          // distractionFreeMode: true,
-          pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-        },
-      },
-    ],
+    // [
+    //   'vuepress-plugin-comment', // 评论
+    //   {
+    //     choosen: 'gitalk',
+    //     options: {
+    //       clientID: 'a6e1355287947096b88b',
+    //       clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
+    //       repo: 'blog-gitalk-comment', // GitHub 仓库
+    //       owner: 'whcoding', // GitHub仓库所有者
+    //       admin: ['whcoding'], // 对仓库有写权限的人
+    //       // distractionFreeMode: true,
+    //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
+    //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+    //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+    //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+    //       body:
+    //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+    //     },
+    //   },
+    // ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
