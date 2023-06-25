@@ -8,10 +8,10 @@ cd docs/.vuepress/dist # 进入生成的文件夹
 # echo 'whcoding.com' > CNAME
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
-  githubUrl=git@github.com:whcoding/vuepress-blog.git
+  githubUrl=git@github.com:whcoding/whcoding.github.io.git
 else
   msg='来自github action的自动部署'
-  githubUrl=https://whcoding:${GITHUB_TOKEN}git@github.com:whcoding/vuepress-blog.git
+  githubUrl=https://whcoding:${GITHUB_TOKEN}git@github.com:whcoding/whcoding.github.io.git
   git config --global user.name "whcoding"
   git config --global user.email "840346763@qq.com"
 fi
